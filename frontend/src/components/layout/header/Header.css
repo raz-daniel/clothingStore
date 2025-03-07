@@ -1,0 +1,41 @@
+.Header {
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Header nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .Header nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  .Header nav a:hover {
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .Header nav a.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .Header div:last-child {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .Header input {
+    min-width: 250px;
+  }

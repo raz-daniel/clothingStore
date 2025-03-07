@@ -1,0 +1,39 @@
+/* NotFound.css */
+.NotFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .NotFound h1 {
+    font-size: 8rem;
+    color: var(--accent-color);
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .NotFound p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+  }
+  
+  .NotFound .back-link {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  .NotFound .back-link:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+  }

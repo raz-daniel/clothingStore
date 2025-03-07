@@ -1,0 +1,32 @@
+.Add {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .Add form {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .Add form button {
+    margin-top: 10px;
+    background-color: var(--success-color);
+    color: var(--dark-color);
+    font-weight: bold;
+  }
+  
+  .Add form button:hover {
+    background-color: #3da8c9;
+  }
+  
+  .error {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: -10px;
+    margin-bottom: -5px;
+  }
