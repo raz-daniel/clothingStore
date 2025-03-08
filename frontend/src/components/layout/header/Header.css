@@ -104,3 +104,26 @@
     flex-grow: 1;
   }
 }
+
+.Header {
+  position: relative;
+  border-bottom: none; /* Remove any bottom border if it exists */
+}
+
+.Header::before, 
+.Header::after {
+  display: none; /* Remove any pseudo-elements that might be creating lines */
+}
+
+.Header form {
+  position: relative;
+  z-index: 10; /* Ensure the form is above any other elements */
+}
+
+.Header input {
+  position: relative;
+  z-index: 5;
+  border: 1px solid #e0e0e0;
+  background: white;
+  width: 100%;
+}
