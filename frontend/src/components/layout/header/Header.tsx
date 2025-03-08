@@ -1,6 +1,7 @@
 import './Header.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import LogoImage from '../../../assets/clothStoreLogo.jpg'
 
 export default function Header(): JSX.Element {
 
@@ -9,17 +10,19 @@ export default function Header(): JSX.Element {
 
     function handleSearch() {
         if (searchTerm.trim()) {
-            navigate(`/books/list?search=${searchTerm}`)
+            navigate(`/items/list?search=${encodeURIComponent(searchTerm)}`)
         }
     }
 
     return (
         <div className='Header'>
-
+            <div>
+                <img src={LogoImage} />
+            </div>
             <div>
                 <nav>
-                    <NavLink to="books/list">Books</NavLink>
-                    <NavLink to="books/add">Add Book</NavLink>
+                    <NavLink to="items/list">Store</NavLink>
+                    <NavLink to="items/add">Add Item</NavLink>
                     <NavLink to="/home">Home</NavLink>
                 </nav>
             </div>
@@ -29,7 +32,7 @@ export default function Header(): JSX.Element {
                     handleSearch()
                 }}>
                     <input
-                        placeholder='search a book...'
+                        placeholder='search item...'
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
