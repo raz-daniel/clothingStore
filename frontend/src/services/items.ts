@@ -14,6 +14,18 @@ class Items {
         return response.data
     }
 
+    async getItemsPerPrice(price: number): Promise<Item[]> {
+        const response = await axios.get<Item[]>(`${import.meta.env.VITE_REST_SERVER_URL}/items/price?price=${price}`)
+        return response.data
+    }
+
+    async getItemsPerRecycled(isRecycled: boolean): Promise<Item[]> {
+        console.log(`Fetching recycled=${isRecycled}`); // Debug log
+        const response = await axios.get<Item[]>(`${import.meta.env.VITE_REST_SERVER_URL}/items/isRecycled?isRecycled=${isRecycled}`)
+        console.log("Response data:", response.data);
+        return response.data
+    }
+
     async add(draft: Draft): Promise<Item> {
         const response = await axios.post<Item>(`${import.meta.env.VITE_REST_SERVER_URL}/items/`, draft)
         return response.data

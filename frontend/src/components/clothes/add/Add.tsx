@@ -52,10 +52,11 @@ export default function Add(): JSX.Element {
             setTimeout(() => {
             navigate('/items/list', { 
                 state: { 
-                    newItemId: newItem.id, categoryChosen: newItem.categoryId 
+                    newItemId: newItem.id, 
+                    categoryChosen: newItem.categoryId 
                 } 
             })
-        }, 2000)
+        }, 1000)
         } catch {
             toast.current?.show({
                 severity: 'error',
